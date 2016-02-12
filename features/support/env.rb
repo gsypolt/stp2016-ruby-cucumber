@@ -16,8 +16,6 @@ rescue
 	puts "no page objects found"
 end
 
-@browser = nil
-
 Before do | scenario |
 	# need to configure env variables for browser
   Capybara.default_max_wait_time = 60
@@ -41,6 +39,7 @@ Before do | scenario |
           :version => ENV['version'],
           :browserName => ENV['browserName'],
           :platform => ENV['platform'],
+          :screenResolution => '1280x1024',
           :name => "#{scenario.feature.name} - #{scenario.name}"
       }
 
