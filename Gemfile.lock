@@ -51,7 +51,7 @@ GEM
     page_navigation (0.9)
       data_magic (>= 0.14)
     parallel (1.6.1)
-    parallel_tests (2.3.1)
+    parallel_tests (2.4.0)
       parallel
     rack (1.6.4)
     rack-test (0.6.3)
@@ -79,7 +79,7 @@ GEM
     sauce_whisk (0.0.19)
       json (~> 1.8.1)
       rest-client (~> 1.8.0)
-    selenium-webdriver (2.51.0)
+    selenium-webdriver (2.52.0)
       childprocess (~> 0.5)
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
@@ -109,4 +109,4 @@ DEPENDENCIES
   selenium-webdriver
 
 BUNDLED WITH
-   1.10.6
+   1.11.2

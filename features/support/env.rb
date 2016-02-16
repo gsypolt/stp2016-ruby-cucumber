@@ -34,17 +34,16 @@ Before do | scenario |
   else
 
     Capybara.register_driver :selenium do |app|
-
       capabilities = {
           :version => ENV['version'],
           :browserName => ENV['browserName'],
           :platform => ENV['platform'],
-          :screenResolution => '1280x1024',
           :name => "#{scenario.feature.name} - #{scenario.name}"
       }
 
       url = "http://#{ENV['SAUCE_USERNAME']}:#{ENV['SAUCE_ACCESS_KEY']}@ondemand.saucelabs.com:80/wd/hub".strip
       Capybara::Selenium::Driver.new(app, :browser => :remote, :url => url, :desired_capabilities => capabilities)
+
     end
 
   end
@@ -58,6 +57,8 @@ After do | scenario |
   else
 
     sessionid = ::Capybara.current_session.driver.browser.session_id
+    ::Capybara.current_session.driver.quit
+
     # sessionid = @browser.send(:bridge).session_id
     jobname = "#{scenario.feature.name} - #{scenario.name}"
 
@@ -66,9 +67,10 @@ After do | scenario |
 
     job = SauceWhisk::Jobs.fetch sessionid
     job.name = jobname
+    job.passed = scenario.passed? ? true : false
     job.save
 
-    ::Capybara.current_session.driver.quit
+
 
     if scenario.passed?
       SauceWhisk::Jobs.pass_job sessionid
