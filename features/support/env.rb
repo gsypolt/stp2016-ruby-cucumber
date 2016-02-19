@@ -49,34 +49,27 @@ Before do | scenario |
   end
 end
 
-# "after all"
-After do | scenario |
+Around do | scenario, block |
+
+	block.call
 
   if ENV['LOCAL']
       jobname = "#{scenario.feature.name} - #{scenario.name}"
+			puts jobname
   else
 
-    sessionid = ::Capybara.current_session.driver.browser.session_id
-    ::Capybara.current_session.driver.quit
+  	sessionid = ::Capybara.current_session.driver.browser.session_id
+	  ::Capybara.current_session.driver.quit
 
-    # sessionid = @browser.send(:bridge).session_id
-    jobname = "#{scenario.feature.name} - #{scenario.name}"
+	  # sessionid = Capybara.current_session.driver.browser.session_id
+	  jobname = "#{scenario.feature.name} - #{scenario.name}"
 
-    puts ""
-    puts "SauceOnDemandSessionID=#{sessionid} job-name=#{jobname}"
+	  # Output sessionId and jobname to std out for Sauce OnDemand Plugin to display embeded results
+	  puts "SauceOnDemandSessionID=#{sessionid} job-name=#{jobname}"
 
-    job = SauceWhisk::Jobs.fetch sessionid
-    job.name = jobname
-    job.passed = scenario.passed? ? true : false
-    job.save
-
-
-
-    if scenario.passed?
-      SauceWhisk::Jobs.pass_job sessionid
-    else
-      SauceWhisk::Jobs.fail_job sessionid
-    end
-
+	  job = SauceWhisk::Jobs.fetch sessionid
+	  job.name = jobname
+	  job.passed = scenario.passed? ? true : false
+	  job.save
   end
 end
