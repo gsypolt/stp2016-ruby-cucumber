@@ -67,6 +67,8 @@ Around do | scenario, block |
 	  # Output sessionId and jobname to std out for Sauce OnDemand Plugin to display embeded results
 	  puts "SauceOnDemandSessionID=#{sessionid} job-name=#{jobname}"
 
+		require “logger” logger = ::Logger.new(STDOUT) log.level = Logger::DEBUG SauceWhisk.logger = logger
+		
 	  job = SauceWhisk::Jobs.fetch sessionid
 	  job.name = jobname
 	  job.passed = scenario.passed? ? true : false
