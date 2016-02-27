@@ -27,6 +27,14 @@ task :os_x_10_10_safari do
   run_tests('OS X 10.10', 'safari', '8', 'junit_reports/os_x_safari')
 end
 
+task :travis do
+  ["rake os_x_10_10_chrome", "rake windows_7_firefox"].each do |cmd|
+    puts "Starting to run #{cmd}..."
+    system("export DISPLAY=:99.0 && bundle exec #{cmd}")
+    raise "#{cmd} failed!" unless $?.exitstatus == 0
+  end
+end
+
 # Task to run all the above configurations in parallel
 multitask :test_sauce => [
     :windows_10_edge,

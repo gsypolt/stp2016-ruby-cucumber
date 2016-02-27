@@ -1,3 +1,6 @@
+sudo: false
+cache: bundler
+
 addons:
   sauce_connect:
     username: $SAUCE_USERNAME
@@ -7,4 +10,10 @@ language: ruby
 rvm:
  - "2.2.1"
 
-script: rake test_sauce
+before_install: 'bundle install'
+
+script: 'rake travis'
+
+notifications:
+  email:
+    - greg@qualityelement.com

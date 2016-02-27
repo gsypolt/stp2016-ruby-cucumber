@@ -72,7 +72,7 @@ Around do | scenario, block |
 		logger.level = Logger::DEBUG
 		SauceWhisk.logger = logger
 
-	  job = SauceWhisk::Jobs.fetch sessionid
+	  job = SauceWhisk::Jobs.fetch(sessionid)
 	  job.name = jobname
 	  job.passed = scenario.passed? ? true : false
 	  job.save
