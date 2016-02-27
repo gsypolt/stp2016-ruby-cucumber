@@ -1,0 +1,4 @@
+addons:
+  sauce_connect:
+    username: $SAUCE_USERNAME
+    access_key: $SAUCE_ACCESS_KEY
