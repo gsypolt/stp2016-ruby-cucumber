@@ -2,3 +2,9 @@ addons:
   sauce_connect:
     username: $SAUCE_USERNAME
     access_key: $SAUCE_ACCESS_KEY
+
+language: ruby
+rvm:
+ - "2.2.1"
+
+script: rake test_sauce
