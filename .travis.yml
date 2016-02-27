@@ -1,6 +1,5 @@
 language: ruby
-rvm:
- - 2.2.1
+rvm: 2.2.1
 
 sudo: false
 cache: bundler
@@ -17,8 +16,4 @@ addons:
     access_key: $SAUCE_ACCESS_KEY
       secure: "The secure string output by `travis encrypt`"
 
-script: 'bundle exec rake travis'
-
-notifications:
-  email:
-    - greg@qualityelement.com
+script: 'rake travis'
