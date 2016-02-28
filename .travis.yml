@@ -10,6 +10,5 @@ addons:
   sauce_connect:
     username: $SAUCE_USERNAME
     access_key: $SAUCE_ACCESS_KEY
-      secure: "The secure string output by `travis encrypt`
 
 script: 'bundle exec rake travis'
