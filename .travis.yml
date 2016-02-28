@@ -16,4 +16,4 @@ addons:
     access_key: $SAUCE_ACCESS_KEY
       secure: "The secure string output by `travis encrypt`"
 
-script: 'rake travis'
+script: 'bundle exec rake travis'

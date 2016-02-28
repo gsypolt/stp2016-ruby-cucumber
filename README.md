@@ -2,5 +2,6 @@
 The Ruby Cucumber skeleton for STP 2016 workshop
 
 # Configuration Workstation
- MAC: coming soon
- PC: coming soon
+ MAC: http://www.qualityelement.com/setup-mac-workstation-ruby.html
+ PC: http://www.qualityelement.com/setup-pc-workstation-ruby.html
+ PC + VirtualBox: coming soon
