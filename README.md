@@ -1,7 +1,32 @@
 # stp2016-ruby-cucumber
-The Ruby Cucumber skeleton for STP 2016 workshop
+This code is provided as a Cucumber test skeleton for STP 2016 conference workshop. This framework is not maintained by after STP 2016 conference.
+
+# Requirements
+Attendees *must* bring a laptop with Unix environment installed. This includes a WINDOWS with a virtual machine running MAC or UBUNTU for optimal experience.   
 
 # Configuration Workstation
+
  * MAC: [Setup Mac Workstation for Ruby](http://www.qualityelement.com/setup-mac-workstation-ruby.html)
  * PC: [Setup PC Workstation for Ruby](http://www.qualityelement.com/setup-pc-workstation-ruby.html)
  * PC + VirtualBox: coming soon
+
+# Running Tests
+
+* Testing locally
+```
+$ LOCAL=true cucumber
+```
+
+* Tests in parallel
+```
+$ rake test_sauce
+```
+
+## Resources
+##### [SeleniumHQ Documentation](http://www.seleniumhq.org/docs/)
+
+##### [Cucumber Documentation](https://cucumber.io/docs/reference)
+
+##### [Capybara Documentation](http://www.rubydoc.info/github/jnicklas/capybara/master)
+
+##### [Ruby Documentation](http://ruby-doc.org/)
