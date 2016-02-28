@@ -4,16 +4,12 @@ rvm: 2.2.1
 sudo: false
 cache: bundler
 
-branches:
-  only:
-    - master
-
 before_install: 'bundle install'
 
 addons:
   sauce_connect:
     username: $SAUCE_USERNAME
     access_key: $SAUCE_ACCESS_KEY
-      secure: "The secure string output by `travis encrypt`"
+      secure: "The secure string output by `travis encrypt`
 
 script: 'bundle exec rake travis'
