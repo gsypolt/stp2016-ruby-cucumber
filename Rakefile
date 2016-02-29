@@ -37,7 +37,7 @@ end
 
 # Task to run all the above configurations in parallel
 multitask :test_sauce => [
-    :windows_10_edge,
+    # :windows_10_edge,
     :windows_8_1_chrome,
     :windows_7_firefox,
     :os_x_10_10_chrome,
