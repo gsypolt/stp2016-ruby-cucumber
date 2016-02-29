@@ -53,7 +53,7 @@ Around do | scenario, block |
 
 	block.call
 
-  # This block of code is for remote exection 
+  # This block of code is for remote exection
   if ENV['LOCAL'] != 'true'
   	sessionid = ::Capybara.current_session.driver.browser.session_id
 	  ::Capybara.current_session.driver.quit
@@ -63,6 +63,11 @@ Around do | scenario, block |
 
 	  # Output sessionId and jobname to std out for Sauce OnDemand Plugin to display embeded results
 	  puts "SauceOnDemandSessionID=#{sessionid} job-name=#{jobname}"
+
+		require 'logger'
+ 		logger = ::Logger.new(STDOUT)
+ 		logger.level = Logger::DEBUG
+ 		SauceWhisk.logger = logger
 
 	  job = SauceWhisk::Jobs.fetch(sessionid)
 	  job.name = jobname
