@@ -1,5 +1,5 @@
 # stp2016-ruby-cucumber
-This code is provided as a Cucumber test skeleton for STP 2016 conference workshop. This framework is not maintained by after STP 2016 conference.
+This code is provided as a Cucumber test skeleton for STP 2016 conference workshop. This framework will not be maintained after the STP 2016 conference.
 
 # Requirements
 Attendees *must* bring a laptop with Unix environment installed. This includes a WINDOWS with a virtual machine running MAC or UBUNTU for optimal experience.   
