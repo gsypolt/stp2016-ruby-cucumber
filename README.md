@@ -7,8 +7,8 @@ Attendees *must* bring a laptop with Unix environment installed. This includes a
 # Configuration Workstation
 
  * MAC: [Setup Mac Workstation for Ruby](http://www.qualityelement.com/setup-mac-workstation-ruby.html)
+ * PC + VirtualBox: [Setup Ubuntu Desktop and VirtualBox on PC](http://www.qualityelement.com/setup-ubuntu-desktop-gui-and-virtualbox-on-pc.html) 
  * PC: [Setup PC Workstation for Ruby](http://www.qualityelement.com/setup-pc-workstation-ruby.html)
- * PC + VirtualBox: coming soon
 
 # Running Tests
 
