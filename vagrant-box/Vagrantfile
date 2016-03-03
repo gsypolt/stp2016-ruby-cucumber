@@ -67,5 +67,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", inline: "sudo apt-get update"
   config.vm.provision "shell", inline: "sudo apt-get -y install curl"
   config.vm.provision "shell", inline: "sudo apt-get -y install git"
+  config.vm.provision "shell", inline: "sudo apt-get -y install bundler"
+
 
 end
