@@ -1,6 +1,4 @@
 #!/bin/bash
-echo "--- Make a directory for automation development then go to this directory ---"
-mkdir -p ~/work/github
 
 echo "--- Installing RVM first we need to import public key in our system then use curl to install rvm in our system ---"
 gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
