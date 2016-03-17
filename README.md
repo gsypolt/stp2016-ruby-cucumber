@@ -9,7 +9,7 @@ Attendees *must* bring a laptop with Unix environment installed. This includes a
  * MAC: [Setup Mac Workstation for Ruby](http://www.qualityelement.com/setup-mac-workstation-ruby.html)
  * PC + VirtualBox: [Setup Ubuntu Desktop and VirtualBox on PC](http://www.qualityelement.com/setup-ubuntu-desktop-gui-and-virtualbox-on-pc.html)
 
-# Running Tests 
+# Running Tests
 
 * Testing locally
 ```
@@ -23,8 +23,8 @@ $ rake test_sauce
 
 # Blogs Related to the Workshop
 
-* A Two-Minute BDD Overview - http://bit.ly/1Z1zR12 by [@ahunsberger](https://twitter.com/aahunsberger)
-* Write Great Cucumber Tests - http://bit.ly/1Ubzdyv by [@gregsypolt](https://twitter.com/gregsypolt)
+* [A Two-Minute BDD Overview](http://bit.ly/1Z1zR12) by [@ahunsberger](https://twitter.com/aahunsberger)
+* [Write Great Cucumber Tests](http://bit.ly/1Ubzdyv) by [@gregsypolt](https://twitter.com/gregsypolt)
 
 
 ## Resources
