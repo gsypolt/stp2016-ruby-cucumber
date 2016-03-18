@@ -18,9 +18,14 @@ end
 
 Before do | scenario |
 	# need to configure env variables for browser
-  Capybara.default_max_wait_time = 60
-  Capybara.default_selector = :css
-  Capybara.current_driver = :selenium
+
+	Capybara.configure do |config|
+		config.default_driver = :selenium
+		config.javascript_driver = :selenium
+		config.default_selector = :css
+		config.default_max_wait_time = 60
+		# config.app_host = 'http://www.dominos.com'
+	end
 
   if ENV['LOCAL']
     # Execute selenium tests locally
