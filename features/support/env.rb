@@ -2,9 +2,9 @@ begin require 'rspec/expectations'; rescue LoadError; require 'spec/expectations
 require 'selenium-webdriver'
 require "capybara/rspec"
 require "capybara/cucumber"
-require 'page-object'
 require 'require_all'
 require 'sauce_whisk'
+require 'site_prism'
 
 
 Capybara::DSL
