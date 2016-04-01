@@ -24,7 +24,7 @@ Before do | scenario |
 		config.javascript_driver = :selenium
 		config.default_selector = :css
 		config.default_max_wait_time = 60
-		# config.app_host = 'http://www.dominos.com'
+		# config.app_host = 'http://www.dominos.com' # set the default url for testing
 	end
 
   if ENV['LOCAL']

@@ -1,8 +1,8 @@
 language: ruby
+cache: bundler
 rvm: 2.2.1
 
 sudo: false
-cache: bundler
 
 before_install: 'bundle install'
 
