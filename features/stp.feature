@@ -1,7 +1,8 @@
 @stp
 Feature: Order Online
 
-brief description
+As an user, I want to order a pizza for delivery so
+that I can stay home
 
 Scenario: Delivery Address
   Given I have entered a valid address
