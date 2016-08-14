@@ -1,8 +1,6 @@
 node('slave') {
   stage 'Checkout'
-    git url: 'git@github.com:gsypolt/stp2016-ruby-cucumber.git',
-        branch: 'master',
-        credentialsId: 'add-git-credentials-key'
+    checkout scm
     sh 'pipeline/prepare-gems.sh'
 
   stage 'Pre-Commit'
