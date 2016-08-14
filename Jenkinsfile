@@ -1,4 +1,4 @@
-node('slave') {
+node {
   stage 'Checkout'
     checkout scm
     sh 'pipeline/prepare-gems.sh'
