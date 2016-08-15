@@ -1,6 +1,7 @@
 node {
   stage 'Checkout'
     checkout scm
+    // sh 'pipeline/prepare-gems.sh'
     echo 'Stage Checkout'
 
   stage 'Commit'
@@ -11,9 +12,9 @@ node {
     echo 'Stage Commit'
 
   stage 'Acceptance'
-    sh 'launch-environment-acceptance.sh'
-    parallel 'Acceptance Testing': {
-      sh 'run-infrastructure-tests.sh'
-      sh 'run-selenium-tests.sh'
-    }
+    // sh 'launch-environment-acceptance.sh'
+    // parallel 'Acceptance Testing': {
+    //  sh 'run-infrastructure-tests.sh'
+    //  sh 'run-selenium-tests.sh'
+    // }
 }
