@@ -15,3 +15,4 @@ node {
       sh 'run-infrastructure-tests.sh'
       sh 'run-selenium-tests.sh'
     }
+}    
