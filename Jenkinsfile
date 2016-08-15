@@ -1,7 +1,6 @@
 node {
   stage 'Checkout'
     checkout scm
-    # sh 'pipeline/prepare-gems.sh'
     echo 'Stage Checkout'
 
   stage 'Pre-Commit'
